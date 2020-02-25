@@ -1,0 +1,249 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/contenedor"
+    tools:context="com.emontec.ligat.fragmentos.Posiciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="General/Grupos  "
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:theme="@style/SCBSwitch"
+            android:textAlignment="textEnd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pos"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Equipo" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Puntos"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dif." />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_general"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/pad_5dp"
+                android:layout_marginRight="@dimen/pad_5dp"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:layout_marginBottom="@dimen/pad_10dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/tarjeta15dp"
+                app:cardCornerRadius="14dp">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view_fa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_grupos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grupo1"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/titulos"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view2"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/pad_5dp"
+                        android:layout_marginRight="@dimen/pad_5dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:layout_marginBottom="@dimen/pad_10dp"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardCornerRadius="14dp">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view_grupo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grupo 2"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/titulos"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view3"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/pad_5dp"
+                        android:layout_marginRight="@dimen/pad_5dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:layout_marginBottom="@dimen/pad_10dp"
+                        app:cardElevation="@dimen/tarjeta15dp"
+                        android:layout_height="280dp"
+                        app:cardCornerRadius="14dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view_grupo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grupo 3"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/titulos"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view4"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/pad_5dp"
+                        android:layout_marginRight="@dimen/pad_5dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:layout_marginBottom="@dimen/pad_10dp"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardCornerRadius="14dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view_grupo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grupo 4"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/titulos"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view5"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/pad_5dp"
+                        android:layout_marginRight="@dimen/pad_5dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:layout_marginBottom="@dimen/pad_10dp"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardCornerRadius="14dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view_grupo4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

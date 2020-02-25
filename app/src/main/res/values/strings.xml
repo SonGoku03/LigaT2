@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LigaT</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Liga Inter-Tecámac</string>
+    <string name="nav_header_subtitle">EMONTEC</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="Tu_liga">Tu Liga</string>
+    <string name="title_activity_tu_liga">Tu Liga</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <string name="version">Versión V1. 02.20.003</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

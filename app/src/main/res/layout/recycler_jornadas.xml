@@ -1,0 +1,192 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlFcontainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/pad_5dp"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="@dimen/space_component2x"
+        android:layout_marginRight="@dimen/space_component2x"
+        android:layout_marginTop="0dp">
+
+
+        <LinearLayout
+                android:id="@+id/llContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/pad_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pad_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/campo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Campo"
+                    android:textAlignment="textEnd"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/fff"
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:text=" Horario"
+                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/horario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:text=" Horario"
+                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/ff"
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAccent"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:text=" Horario"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="Jornada: " />
+
+                    <TextView
+                        android:id="@+id/Jonadas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="5"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Nombre_local"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Nombre"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#0E0E0E"
+                            android:textSize="@dimen/equipos_letra" />
+
+                        <ImageView
+                            android:id="@+id/logo_local"
+                            android:layout_width="@dimen/logos"
+                            android:layout_height="@dimen/logos"
+                            android:layout_weight="1"
+                            />
+
+                        <TextView
+                            android:id="@+id/gol_local"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="#030303"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/abc_text_size_small_material"/>
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textAlignment="center"
+                            android:textColor="#030303"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/abc_text_size_small_material" />
+
+                        <TextView
+                            android:id="@+id/gol_visita"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textAlignment="center"
+                            android:textColor="#030303"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/abc_text_size_small_material"
+                            />
+
+                        <ImageView
+                            android:id="@+id/logo_visita"
+                            android:layout_width="@dimen/logos"
+                            android:layout_height="@dimen/logos"
+                            android:layout_weight="1"
+                            />
+
+                        <TextView
+                            android:id="@+id/Nombre_visita"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="right"
+                            android:text="Nombre "
+                            android:textAlignment="center"
+                            android:textSize="@dimen/equipos_letra"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
