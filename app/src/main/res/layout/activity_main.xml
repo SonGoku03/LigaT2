@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/color_negro"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -22,8 +22,8 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/balon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:visibility="visible"
                 app:lottie_autoPlay="true"
@@ -33,11 +33,12 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/balon2"
+
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginTop="100dp"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="balon2.json"
                 app:lottie_imageAssetsFolder="assets"
