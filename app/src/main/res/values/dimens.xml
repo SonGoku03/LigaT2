@@ -14,7 +14,10 @@
     <dimen name="space_big">20dp</dimen>
     <dimen name="pad_5dp">5dp</dimen>
     <dimen name="pad_10dp">10dp</dimen>
+    <dimen name="tarjeta5dp">5dp</dimen>
+    <dimen name="tarjeta10dp">10dp</dimen>
     <dimen name="tarjeta15dp">15dp</dimen>
+    <dimen name="tarjeta20dp">20dp</dimen>
     <dimen name="negative_margin_design_fab_size_mini">10dp</dimen>
 
     <dimen name="titulos">20dp</dimen>

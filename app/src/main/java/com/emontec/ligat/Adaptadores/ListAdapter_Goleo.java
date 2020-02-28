@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.emontec.ligat.Modelo.Equipos;
 import com.emontec.ligat.Modelo.M_goleador;
 import com.emontec.ligat.R;
@@ -38,7 +40,7 @@ public class ListAdapter_Goleo extends RecyclerView.Adapter<ListAdapter_Goleo.Vi
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         TextView Nombre,id_goleador,id_equipo,Goles,posicion;
-
+        ImageView logo;
         Context context;
         private String codigo;
         RelativeLayout cardw;
@@ -53,7 +55,7 @@ public class ListAdapter_Goleo extends RecyclerView.Adapter<ListAdapter_Goleo.Vi
             id_goleador = (TextView) v.findViewById(R.id.id_goleador);
             id_equipo = (TextView) v.findViewById(R.id.id_equipo);
             posicion = (TextView) v.findViewById(R.id.posiicion_goleo);
-
+            logo=(ImageView) v.findViewById(R.id.logo_goleador);
 
         }
         void setOnClickListener()    {
@@ -105,7 +107,7 @@ public class ListAdapter_Goleo extends RecyclerView.Adapter<ListAdapter_Goleo.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-
+        Glide.with(mContextCol).load(mDatasetcol.get(position).getLogo_visita()).into(holder.logo);
         holder.Nombre.setText(mDatasetcol.get(position).getNombre());
         holder.id_equipo.setText(mDatasetcol.get(position).getId_equipo());
         int count =1;
@@ -114,6 +116,7 @@ public class ListAdapter_Goleo extends RecyclerView.Adapter<ListAdapter_Goleo.Vi
         holder.posicion.setText(posicion);
         holder.id_goleador.setText(mDatasetcol.get(position).getId_jugador());
         holder.Goles.setText(mDatasetcol.get(position).getGoles());
+
         holder.setOnClickListener();
 
 

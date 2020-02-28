@@ -60,7 +60,7 @@ public class Fr_Jornadas extends Fragment {
     private RecyclerView.LayoutManager mLayoutManagerCampo4;
 
     private static final String TAG = MainActivity.class.getName();
-    TextView des;
+    TextView des,jornadas;
     LottieAnimationView fubol;
     CardView cardView;
     ///////////////// Declaracion de variables para el recicler view
@@ -90,6 +90,11 @@ public class Fr_Jornadas extends Fragment {
         fubol = (LottieAnimationView) view.findViewById(R.id.futbol);
         fubol.setAnimation("futbol.json");
         fubol.playAnimation();
+
+        SharedPreferences misPreferencias =getActivity().getSharedPreferences("Jornada",Context.MODE_PRIVATE);
+        String id_jornada= (misPreferencias.getString("id_jornada",""));
+        jornadas = (TextView) view.findViewById(R.id.jornda);
+        jornadas.setText(id_jornada);
 
         ///// RECICLER CAMPO 1
         mRecyclerViewEquipos = (RecyclerView) view.findViewById(R.id.recycler_campo1);

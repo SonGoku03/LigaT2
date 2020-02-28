@@ -2,15 +2,19 @@ package com.emontec.ligat.Adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.transition.Transition;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.emontec.ligat.Detalle_equipo.Detalle;
 import com.emontec.ligat.Modelo.Equipos;
 import com.emontec.ligat.R;
@@ -37,6 +41,7 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         TextView Nombre,posicion,puntos,diferencia,par_ju,par_ga,par_em,par_pe,gol_fa,gol_contra;
+        ImageView img_equipo;
 
         Context context;
         private String codigo;
@@ -57,6 +62,8 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
             par_pe = (TextView) v.findViewById(R.id.par_pe);
             gol_fa = (TextView)v.findViewById(R.id.gol_fa);
             gol_contra = (TextView)v.findViewById(R.id.gol_contra);
+
+            img_equipo = (ImageView) v.findViewById(R.id.img_equipo);
 
 
 
@@ -86,7 +93,8 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
                     bundle.putExtra("gol_contra", (String) gol_contra.getText());
                     bundle.putExtra("diferencia", (String) diferencia.getText());
                     bundle.putExtra("posicion", (String) posicion.getText());
-
+                    Bitmap bitmap = ((BitmapDrawable)img_equipo.getDrawable()).getBitmap();
+                    bundle.putExtra("bitMap",bitmap);
 
                   /*SharedPreferences misPreferencias = context.getSharedPreferences("Familia",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor =  misPreferencias.edit();
@@ -119,7 +127,7 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-
+        Glide.with(mContextCol).load(mDatasetcol.get(position).getLogo_visita()).into(holder.img_equipo);
         holder.Nombre.setText(mDatasetcol.get(position).getNombre());
         holder.puntos.setText(mDatasetcol.get(position).getPuntos());
         int count =1;

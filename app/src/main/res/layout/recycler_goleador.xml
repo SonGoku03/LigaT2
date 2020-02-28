@@ -44,7 +44,7 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#000000" />
 
-                        <TextView
+                        <ImageView
                             android:id="@+id/logo_goleador"
                             android:layout_width="@dimen/logos"
                             android:background="@drawable/logo_vikingo"

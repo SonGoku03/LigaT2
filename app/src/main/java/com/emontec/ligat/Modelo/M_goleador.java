@@ -7,6 +7,7 @@ public class M_goleador {
     private String nombre;
     private String goles;
     private String equipo;
+    private String logo_visita;
 
 
     public M_goleador(){    }
@@ -36,6 +37,11 @@ public class M_goleador {
     public void setEquipo(String equipo) {
         this.equipo = equipo; }
 
+    public String getLogo_visita() {
+        return logo_visita;
+    }
+    public void setLogo_visita(String logo_visita) {
+        this.logo_visita = logo_visita; }
 }
 
 

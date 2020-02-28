@@ -43,9 +43,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -93,10 +91,13 @@
                         android:textSize="30sp" />
 
                     <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
+                        android:id="@+id/imagen_detalle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/pad_10dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:visibility="visible"
                         app:srcCompat="@drawable/logo_vikingo" />
 
                     <LinearLayout
@@ -140,6 +141,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/pad_10dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -185,26 +187,50 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView18"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PARTIDOS"
-            android:textColor="@color/color_negro"
-            android:textStyle="bold"
-            android:textSize="@dimen/titulos"
-            android:textAlignment="center"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/color_verde"
+                android:layout_gravity="center"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PARTIDOS"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textColor="@color/color_negro"
+                android:textSize="@dimen/titulos"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@color/color_verde"
+                android:layout_weight="1"
+                android:text="TextView" />
+        </LinearLayout>
 
         <GridLayout
             android:id="@+id/mainGrid"
-            android:columnCount="2"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
             android:padding="14dp"
-            >
+            android:rowCount="3">
 
             <!-- Row 1 -->
 
@@ -212,43 +238,40 @@
             <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="5dp"
+                android:layout_columnWeight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                app:cardElevation="2dp"
+                android:layout_marginBottom="5dp"
                 app:cardCornerRadius="8dp"
-                >
+                app:cardElevation="2dp">
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Jugados  "
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:text="0"
                         android:id="@+id/jugados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:text="0"
                         android:textAlignment="center"
                         android:textColor="@color/color_verde"
                         android:textSize="25sp"
-                        android:layout_marginTop="@dimen/pad_10dp"
-                        android:textStyle="bold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -259,41 +282,40 @@
             <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="5dp"
+                android:layout_columnWeight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                app:cardElevation="2dp"
+                android:layout_marginBottom="5dp"
                 app:cardCornerRadius="8dp"
-                >
+                app:cardElevation="2dp">
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Ganados  "
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:text="0"
                         android:id="@+id/ganados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:text="0"
                         android:textAlignment="center"
                         android:textColor="@color/color_verde"
                         android:textSize="25sp"
-                        android:layout_marginTop="@dimen/pad_10dp"
-                        android:textStyle="bold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -307,41 +329,40 @@
             <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="5dp"
+                android:layout_columnWeight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                app:cardElevation="2dp"
+                android:layout_marginBottom="5dp"
                 app:cardCornerRadius="8dp"
-                >
+                app:cardElevation="2dp">
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Empatados"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textStyle="bold" />
+
                     <TextView
-                        android:text="0"
                         android:id="@+id/empatados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:text="0"
                         android:textAlignment="center"
                         android:textColor="@color/color_verde"
                         android:textSize="25sp"
-                        android:layout_marginTop="@dimen/pad_10dp"
-                        android:textStyle="bold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -352,14 +373,13 @@
             <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="5dp"
+                android:layout_columnWeight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                app:cardElevation="2dp"
+                android:layout_marginBottom="5dp"
                 app:cardCornerRadius="8dp"
-                >
+                app:cardElevation="2dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -395,15 +415,40 @@
 
         </GridLayout>
 
-        <TextView
-            android:id="@+id/textView19"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GOLES"
-            android:textAlignment="center"
-            android:textColor="@color/color_negro"
-            android:textSize="@dimen/titulos"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/color_verde"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOLES"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/color_negro"
+                android:textSize="@dimen/titulos"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/color_verde"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="TextView" />
+        </LinearLayout>
 
         <GridLayout
             android:id="@+id/mainGrid2"

@@ -221,7 +221,7 @@ public class Posiciones extends Fragment {
 
         //Definimos un String con la URL del End-point
         String url = "http://emontec.com/liga/ws_tabla_general.php";
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
 
         //Instanciamos un objeto RequestQueue el cual sae encarga de gestionar la cola de peticiones
         RequestQueue queue = Volley.newRequestQueue(getContext());
@@ -272,6 +272,9 @@ public class Posiciones extends Fragment {
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
 
+                                        if (p.has("url_logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("url_logo"))));
+
 
                                       //Agreagamos el objeto Photo al Dataset
                                         myDatasetCa.add(photo);
@@ -312,7 +315,7 @@ public class Posiciones extends Fragment {
         myDatasetGrupo1 = new ArrayList<Equipos>();
         String grupo="1";
         String url = "http://emontec.com/liga/ws_tabla_grupo1.php?Grupo="+grupo;
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
         RequestQueue queue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aRequest = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -355,6 +358,8 @@ public class Posiciones extends Fragment {
 
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
+                                        if (p.has("url_logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("url_logo"))));
                                         //Agreagamos el objeto Photo al Dataset
                                         myDatasetGrupo1.add(photo);
                                         //   progreso.hide();
@@ -386,7 +391,7 @@ public class Posiciones extends Fragment {
         myDatasetGrupo2 = new ArrayList<Equipos>();
         String grupo="2";
         String url = "http://emontec.com/liga/ws_tabla_grupo1.php?Grupo="+grupo;
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
         RequestQueue queue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aRequest = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -429,6 +434,8 @@ public class Posiciones extends Fragment {
 
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
+                                        if (p.has("url_logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("url_logo"))));
                                         //Agreagamos el objeto Photo al Dataset
                                         myDatasetGrupo2.add(photo);
                                         //   progreso.hide();
@@ -462,7 +469,7 @@ public class Posiciones extends Fragment {
         myDatasetGrupo3 = new ArrayList<Equipos>();
         String grupo="3";
         String url = "http://emontec.com/liga/ws_tabla_grupo1.php?Grupo="+grupo;
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
         RequestQueue queue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aRequest = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -505,6 +512,8 @@ public class Posiciones extends Fragment {
 
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
+                                        if (p.has("url_logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("url_logo"))));
                                         //Agreagamos el objeto Photo al Dataset
                                         myDatasetGrupo3.add(photo);
                                         //   progreso.hide();
@@ -537,7 +546,7 @@ public class Posiciones extends Fragment {
         myDatasetGrupo4 = new ArrayList<Equipos>();
         String grupo="4";
         String url = "http://emontec.com/liga/ws_tabla_grupo1.php?Grupo="+grupo;
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
         RequestQueue queue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aRequest = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -580,6 +589,8 @@ public class Posiciones extends Fragment {
 
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
+                                        if (p.has("url_logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("url_logo"))));
                                         //Agreagamos el objeto Photo al Dataset
                                         myDatasetGrupo4.add(photo);
                                         //   progreso.hide();

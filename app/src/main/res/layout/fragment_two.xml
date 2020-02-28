@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tarjeta10dp"
         android:orientation="vertical">
 
         <Switch
@@ -17,9 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="General/Grupos  "
+            android:textStyle="bold"
+            android:textSize="@dimen/tarjeta15dp"
             android:layout_alignParentRight="true"
             android:checked="false"
             android:theme="@style/SCBSwitch"
+            android:layout_marginBottom="@dimen/tarjeta15dp"
             android:textAlignment="textEnd" />
 
         <LinearLayout
@@ -73,7 +77,7 @@
                 android:layout_marginTop="@dimen/pad_10dp"
                 android:layout_marginBottom="@dimen/pad_10dp"
                 android:layout_height="wrap_content"
-                app:cardElevation="@dimen/tarjeta15dp"
+                app:cardElevation="@dimen/tarjeta10dp"
                 app:cardCornerRadius="14dp">
 
 
@@ -126,7 +130,7 @@
                         android:layout_marginTop="@dimen/pad_10dp"
                         android:layout_marginBottom="@dimen/pad_10dp"
                         android:layout_height="wrap_content"
-                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardElevation="@dimen/tarjeta10dp"
                         app:cardCornerRadius="14dp">
 
 
@@ -159,7 +163,7 @@
                         android:layout_marginRight="@dimen/pad_5dp"
                         android:layout_marginTop="@dimen/pad_10dp"
                         android:layout_marginBottom="@dimen/pad_10dp"
-                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardElevation="@dimen/tarjeta10dp"
                         android:layout_height="280dp"
                         app:cardCornerRadius="14dp">
 
@@ -192,7 +196,7 @@
                         android:layout_marginTop="@dimen/pad_10dp"
                         android:layout_marginBottom="@dimen/pad_10dp"
                         android:layout_height="wrap_content"
-                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardElevation="@dimen/tarjeta10dp"
                         app:cardCornerRadius="14dp">
 
                     <android.support.v7.widget.RecyclerView
@@ -224,7 +228,7 @@
                         android:layout_marginTop="@dimen/pad_10dp"
                         android:layout_marginBottom="@dimen/pad_10dp"
                         android:layout_height="wrap_content"
-                        app:cardElevation="@dimen/tarjeta15dp"
+                        app:cardElevation="@dimen/tarjeta10dp"
                         app:cardCornerRadius="14dp">
 
                     <android.support.v7.widget.RecyclerView

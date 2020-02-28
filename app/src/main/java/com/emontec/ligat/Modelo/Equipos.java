@@ -12,6 +12,7 @@ public class Equipos {
     private  String par_pe;
     private  String gol_fa;
     private  String gol_contra;
+    private  String logo_visita;
 
     private String grupo;
 
@@ -83,6 +84,12 @@ public class Equipos {
     }
     public void setGol_contra(String gol_contra) {
         this.gol_contra = gol_contra; }
+
+    public String getLogo_visita() {
+        return logo_visita;
+    }
+    public void setLogo_visita(String logo_visita) {
+        this.logo_visita = logo_visita; }
 
 }
 

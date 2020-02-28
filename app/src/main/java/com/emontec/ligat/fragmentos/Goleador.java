@@ -105,7 +105,7 @@ public class Goleador extends Fragment {
 
         //Definimos un String con la URL del End-point
         String url = "http://emontec.com/liga/ws_tabla_goleo.php";
-        final String urlIMG = "http://bluelinemexico.com/";
+        final String urlIMG = "http://emontec.com/liga/imagenes/logo_equipos/";
 
         //Instanciamos un objeto RequestQueue el cual sae encarga de gestionar la cola de peticiones
         RequestQueue queue = Volley.newRequestQueue(getContext());
@@ -145,6 +145,9 @@ public class Goleador extends Fragment {
 
                                         if (p.has("equipo"))
                                             photo.setEquipo(p.getString("equipo"));
+
+                                        if (p.has("logo"))
+                                            photo.setLogo_visita((urlIMG+(p.getString("logo"))));
 
 
                                         //Agreagamos el objeto Photo al Dataset

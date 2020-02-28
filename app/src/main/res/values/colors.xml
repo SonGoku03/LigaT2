@@ -12,6 +12,7 @@
     <color name="color_verde">#CB009688</color>
     <color name="color_gris">#CBB6B6B6</color>
     <color name="color_azul">#2196F3</color>
+    <color name="color_rojo">#FF5722</color>
 
     <color name="colorFive">#F7C51E</color>
 </resources>

@@ -35,14 +35,20 @@
 
                         <TextView
                             android:id="@+id/tvPosicion"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/tarjeta20dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:layout_weight="1"
                             android:fontFamily="sans-serif-light"
-                            android:text="1"
+                            android:text="30"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#000000" />
+
+                        <ImageView
+                            android:id="@+id/img_equipo"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_futbol" />
 
                         <TextView
                             android:id="@+id/tvNombre"
@@ -51,6 +57,7 @@
                             android:layout_weight="1"
                             android:fontFamily="sans-serif-light"
                             android:text="Nombre"
+                            android:layout_marginLeft="@dimen/pad_5dp"
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#0E0E0E"
                             android:textSize="@dimen/abc_text_size_small_material" />

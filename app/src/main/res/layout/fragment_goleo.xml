@@ -6,43 +6,79 @@
     tools:context="com.emontec.ligat.fragmentos.Goleador">
 
 
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_gravity="center"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="@dimen/pad_5dp"
-        android:layout_marginRight="@dimen/pad_5dp"
-        android:layout_marginTop="@dimen/pad_10dp"
-        android:layout_marginBottom="@dimen/pad_10dp"
         android:layout_height="wrap_content"
-        app:cardElevation="@dimen/tarjeta15dp"
-        app:cardCornerRadius="14dp">
+        android:orientation="vertical">
 
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/futbol"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:layout_marginTop="100dp"
-            android:visibility="visible"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="futbol.json"
-            app:lottie_imageAssetsFolder="assets"
-            app:lottie_loop="true" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tarjeta15dp"
+            android:orientation="horizontal">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/my_recycler_view_goleo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:scrollbars="vertical">
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tarjeta15dp"
 
-    </android.support.v7.widget.RecyclerView>
-    </android.support.v7.widget.CardView>
+                android:text="Pos." />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:text="Jugador" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:text="Goles" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/pad_5dp"
+            android:layout_marginTop="@dimen/tarjeta20dp"
+            android:layout_marginRight="@dimen/pad_5dp"
+            android:layout_marginBottom="@dimen/pad_10dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="@dimen/tarjeta5dp">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/futbol"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="futbol.json"
+                app:lottie_imageAssetsFolder="assets"
+                app:lottie_loop="true" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view_goleo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
 
 </RelativeLayout>
