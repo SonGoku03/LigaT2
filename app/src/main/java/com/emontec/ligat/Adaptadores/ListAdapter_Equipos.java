@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.emontec.ligat.Detalle_equipo.Detalle;
 import com.emontec.ligat.Modelo.Equipos;
 import com.emontec.ligat.R;
 import com.emontec.ligat.Tu_liga;
@@ -35,7 +36,7 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
     // you provide access to all the views for a data item in a view holder
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
-        TextView Nombre,posicion,puntos,diferencia;
+        TextView Nombre,posicion,puntos,diferencia,par_ju,par_ga,par_em,par_pe,gol_fa,gol_contra;
 
         Context context;
         private String codigo;
@@ -50,11 +51,18 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
             posicion = (TextView) v.findViewById(R.id.tvPosicion);
             puntos = (TextView) v.findViewById(R.id.tvPuntos);
             diferencia = (TextView) v.findViewById(R.id.tvDiferencia);
+            par_ju = (TextView) v.findViewById(R.id.par_ju);
+            par_ga = (TextView) v.findViewById(R.id.par_ga);
+            par_em = (TextView) v.findViewById(R.id.par_em);
+            par_pe = (TextView) v.findViewById(R.id.par_pe);
+            gol_fa = (TextView)v.findViewById(R.id.gol_fa);
+            gol_contra = (TextView)v.findViewById(R.id.gol_contra);
+
 
 
         }
         void setOnClickListener()    {
-//          cardw.setOnClickListener(this);
+       Nombre.setOnClickListener(this);
     }
 
 
@@ -62,16 +70,25 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
       @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.rlContainer:
+                case R.id.tvNombre:
 
                     Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
-                    Intent bundle = new Intent(context.getApplicationContext(), Tu_liga.class);
+                    Intent bundle = new Intent(context.getApplicationContext(), Detalle.class);
                     //  bundle.putExtra("codigo",codigo);
-                    /*
-                    bundle.putExtra("category_name", (String) NombreCate.getText());
-                    bundle.putExtra("virtuemart_category_id", (String) idcategory.getText());
 
-                    SharedPreferences misPreferencias = context.getSharedPreferences("Familia",Context.MODE_PRIVATE);
+                     bundle.putExtra("nombre", (String) Nombre.getText());
+                    bundle.putExtra("puntos", (String) puntos.getText());
+                    bundle.putExtra("par_ju", (String) par_ju.getText());
+                    bundle.putExtra("par_ga", (String) par_ga.getText());
+                    bundle.putExtra("par_em", (String) par_em.getText());
+                    bundle.putExtra("par_pe", (String) par_pe.getText());
+                    bundle.putExtra("gol_fa", (String) gol_fa.getText());
+                    bundle.putExtra("gol_contra", (String) gol_contra.getText());
+                    bundle.putExtra("diferencia", (String) diferencia.getText());
+                    bundle.putExtra("posicion", (String) posicion.getText());
+
+
+                  /*SharedPreferences misPreferencias = context.getSharedPreferences("Familia",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor =  misPreferencias.edit();
                     String familia = idcategory.getText().toString();
                     editor.putString("familia",familia);
@@ -109,6 +126,12 @@ public class ListAdapter_Equipos extends RecyclerView.Adapter<ListAdapter_Equipo
         int pos= count+position;
         String posicion = Integer.toString(pos);
         holder.posicion.setText(posicion);
+        holder.par_ju.setText(mDatasetcol.get(position).getPar_ju());
+        holder.par_ga.setText(mDatasetcol.get(position).getPar_ga());
+        holder.par_em.setText(mDatasetcol.get(position).getPar_em());
+        holder.par_pe.setText(mDatasetcol.get(position).getPar_pe());
+        holder.gol_fa.setText(mDatasetcol.get(position).getGol_fa());
+        holder.gol_contra.setText(mDatasetcol.get(position).getGol_contra());
         holder.diferencia.setText(mDatasetcol.get(position).getDiferencia());
         holder.setOnClickListener();
 

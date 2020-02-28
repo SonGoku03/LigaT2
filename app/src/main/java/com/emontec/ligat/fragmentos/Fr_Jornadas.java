@@ -1,6 +1,8 @@
 package com.emontec.ligat.fragmentos;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.RequestQueue;
@@ -226,13 +229,38 @@ public class Fr_Jornadas extends Fragment {
                                 } finally {
                                     //Finalmente si hemos cargado datos en el Dataset
                                     // entonces refrescamos
-                                    if (myDatasetCa.size() > 0)
+                                    if (myDatasetCa.size() > 0){
                                         refreshDataset();
+                                   //     Toast.makeText(getContext(), "hay datos  ", Toast.LENGTH_LONG).show();
+                                    }else{
+                                      //  Toast.makeText(getContext(), "sin datos  ", Toast.LENGTH_LONG).show();
+                                    }
                                 }
                                 mRecyclerViewEquipos.setVisibility(View.VISIBLE);
                             }
                             cardView.setVisibility(View.VISIBLE);
                             fubol.setVisibility(View.INVISIBLE);
+                         /*   AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+                            // set title
+                            alertDialogBuilder.setTitle("Productos nuevos");
+
+                            // set dialog message
+                            alertDialogBuilder
+                                    .setMessage("No existen productos nuevos para este destino")
+                                    .setCancelable(false)
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            // if this button is clicked, close
+                                            // current activity
+
+                                        }
+                                    });
+                            // create alert dialog
+                            AlertDialog alertDialog = alertDialogBuilder.create();
+
+                            // show it
+                            alertDialog.show(); */
                         }
                     }
                 }, new Response.ErrorListener() {

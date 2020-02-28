@@ -251,6 +251,24 @@ public class Posiciones extends Fragment {
                                         if (p.has("puntos"))
                                             photo.setPuntos(p.getString("puntos"));
 
+                                        if (p.has("part_jugados"))
+                                            photo.setPar_ju(p.getString("part_jugados"));
+
+                                        if (p.has("part_ganados"))
+                                            photo.setPar_ga(p.getString("part_ganados"));
+
+                                        if (p.has("part_empatados"))
+                                            photo.setPar_em(p.getString("part_empatados"));
+
+                                        if (p.has("part_perdidos"))
+                                            photo.setPar_pe(p.getString("part_perdidos"));
+
+                                        if (p.has("goles_favor"))
+                                            photo.setGol_fa(p.getString("goles_favor"));
+
+                                        if (p.has("goles_contra"))
+                                            photo.setGol_contra(p.getString("goles_contra"));
+
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
 
@@ -316,6 +334,25 @@ public class Posiciones extends Fragment {
                                             photo.setNombre(p.getString("nombre"));
                                         if (p.has("puntos"))
                                             photo.setPuntos(p.getString("puntos"));
+                                        if (p.has("part_jugados"))
+                                            photo.setPar_ju(p.getString("part_jugados"));
+
+                                        if (p.has("part_ganados"))
+                                            photo.setPar_ga(p.getString("part_ganados"));
+
+                                        if (p.has("part_empatados"))
+                                            photo.setPar_em(p.getString("part_empatados"));
+
+                                        if (p.has("part_perdidos"))
+                                            photo.setPar_pe(p.getString("part_perdidos"));
+
+                                        if (p.has("goles_favor"))
+                                            photo.setGol_fa(p.getString("goles_favor"));
+
+                                        if (p.has("goles_contra"))
+                                            photo.setGol_contra(p.getString("goles_contra"));
+
+
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
                                         //Agreagamos el objeto Photo al Dataset
@@ -371,6 +408,25 @@ public class Posiciones extends Fragment {
                                             photo.setNombre(p.getString("nombre"));
                                         if (p.has("puntos"))
                                             photo.setPuntos(p.getString("puntos"));
+                                        if (p.has("part_jugados"))
+                                            photo.setPar_ju(p.getString("part_jugados"));
+
+                                        if (p.has("part_ganados"))
+                                            photo.setPar_ga(p.getString("part_ganados"));
+
+                                        if (p.has("part_empatados"))
+                                            photo.setPar_em(p.getString("part_empatados"));
+
+                                        if (p.has("part_perdidos"))
+                                            photo.setPar_pe(p.getString("part_perdidos"));
+
+                                        if (p.has("goles_favor"))
+                                            photo.setGol_fa(p.getString("goles_favor"));
+
+                                        if (p.has("goles_contra"))
+                                            photo.setGol_contra(p.getString("goles_contra"));
+
+
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
                                         //Agreagamos el objeto Photo al Dataset
@@ -428,6 +484,25 @@ public class Posiciones extends Fragment {
                                             photo.setNombre(p.getString("nombre"));
                                         if (p.has("puntos"))
                                             photo.setPuntos(p.getString("puntos"));
+                                        if (p.has("part_jugados"))
+                                            photo.setPar_ju(p.getString("part_jugados"));
+
+                                        if (p.has("part_ganados"))
+                                            photo.setPar_ga(p.getString("part_ganados"));
+
+                                        if (p.has("part_empatados"))
+                                            photo.setPar_em(p.getString("part_empatados"));
+
+                                        if (p.has("part_perdidos"))
+                                            photo.setPar_pe(p.getString("part_perdidos"));
+
+                                        if (p.has("goles_favor"))
+                                            photo.setGol_fa(p.getString("goles_favor"));
+
+                                        if (p.has("goles_contra"))
+                                            photo.setGol_contra(p.getString("goles_contra"));
+
+
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
                                         //Agreagamos el objeto Photo al Dataset
@@ -484,6 +559,25 @@ public class Posiciones extends Fragment {
                                             photo.setNombre(p.getString("nombre"));
                                         if (p.has("puntos"))
                                             photo.setPuntos(p.getString("puntos"));
+                                        if (p.has("part_jugados"))
+                                            photo.setPar_ju(p.getString("part_jugados"));
+
+                                        if (p.has("part_ganados"))
+                                            photo.setPar_ga(p.getString("part_ganados"));
+
+                                        if (p.has("part_empatados"))
+                                            photo.setPar_em(p.getString("part_empatados"));
+
+                                        if (p.has("part_perdidos"))
+                                            photo.setPar_pe(p.getString("part_perdidos"));
+
+                                        if (p.has("goles_favor"))
+                                            photo.setGol_fa(p.getString("goles_favor"));
+
+                                        if (p.has("goles_contra"))
+                                            photo.setGol_contra(p.getString("goles_contra"));
+
+
                                         if (p.has("diferencia"))
                                             photo.setDiferencia(p.getString("diferencia"));
                                         //Agreagamos el objeto Photo al Dataset
